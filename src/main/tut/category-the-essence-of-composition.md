@@ -4,21 +4,21 @@ f :: A -> B
 ```scala
 val f: A => B
 ```
-
+................
 ```Haskell
 g :: B -> C
 ```
 ```scala
 val g: B => C
 ```
-
+...............
 ```Haskell
 g . f
 ```
 ```scala
 g compose f
 ```
-
+..............
 ```Haskell
 f :: A -> B
 g :: B -> C
