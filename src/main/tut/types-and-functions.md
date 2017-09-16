@@ -32,7 +32,7 @@ def f: Boolean => Boolean = ???
 fact n = product [1..n]
 ```
 ```scala
-val fact = (n: Int) => (1 to n toList) product
+val fact = (n: Int) => (1 to n).toList.product
 ```
 ................
 ```Haskell
