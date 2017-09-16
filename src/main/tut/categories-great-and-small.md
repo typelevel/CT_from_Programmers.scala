@@ -6,7 +6,7 @@ class Monoid m where
 ```scala
 trait Monoid[M] {
   def mempty: M
-  def mappend(m1: M)(m2: M): M
+  def mappend(m1: M, m2: M): M
 }
 ```
 ................
@@ -17,9 +17,9 @@ instance Monoid String where
 ```
 ```scala
 object Monoid {
-  implicit object stringMonoid extends Monoid[String] {
+  implicit def stringMonoid: Monoid[String] = new Monoid[String] {
     def mempty: String = ""
-    def mappend(m1: String)(m2: String): String = m1 + m2
+    def mappend(m1: String, m2: String): String = m1 + m2
   }
 }
 ```
