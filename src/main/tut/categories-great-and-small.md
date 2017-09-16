@@ -18,7 +18,7 @@ instance Monoid String where
 ```scala
 object Monoid {
   implicit object stringMonoid extends Monoid[String] {
-    def mempty = ""
+    def mempty: String = ""
     def mappend(m1: String)(m2: String): String = m1 + m2
   }
 }
