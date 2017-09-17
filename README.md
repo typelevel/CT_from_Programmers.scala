@@ -1,5 +1,8 @@
 ### Scala sample code for Bartosz Milewski's [Category Theory for Programmers](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/)
 
+## WIP
+Any contribution (PR, review, issues) will be more than welcome!
+
 [![Build Status](https://travis-ci.org/typelevel/CT_from_Programmers.scala.svg)](https://travis-ci.org/typelevel/CT_from_Programmers.scala)
 
 To compile
