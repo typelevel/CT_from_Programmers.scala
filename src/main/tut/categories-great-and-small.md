@@ -3,7 +3,7 @@ class Monoid m where
     mempty  :: m
     mappend :: m -> m -> m
 ```
-```scala
+```tut:silent
 trait Monoid[M] {
   def mempty: M
   def mappend(m1: M, m2: M): M
@@ -15,7 +15,7 @@ instance Monoid String where
     mempty = ""
     mappend = (++)
 ```
-```scala
+```tut:silent
 object Monoid {
   implicit def stringMonoid: Monoid[String] = new Monoid[String] {
     def mempty: String = ""
