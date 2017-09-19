@@ -37,11 +37,31 @@ def f(a: A) : B = ???
 Follow the common strategies in FP codebases, roughly
 
 * if there is one function parameter, create a dedicated parameter list for it and make it the last parameter list. 
-* if there are multple function parameters, group them togeher, and put them in a dedicated last paramater list. 
-* if the haskell code acutally use the curry application of the function, we curry the scala version to the point to that such application is mirrored in the scala code. 
+* if there are multiple function parameters, group them together, and put them in a dedicated last parameter list. 
 * of course, implicit parameters have to go in a separate parameter list
-* everything else go to a single parameter list. 
+* everything else should go to a single parameter list. 
+* if the haskell code partially applied the function, partially apply with underscore in scala code. 
 
+### Infix syntax for type class methods
+
+Create a `XXXOps` implicit extension class to support such infix syntax. 
+E.g. To support `(m1: A => Writer[B]) >=> (m2: B => Writer[C])`
+add 
+```scala
+  implicit class Kleisli[A, B](m1: A => Writer[B]) {
+   def >=>[C](m2: B => Writer[C]): A => Writer[C] = ...
+```
+### Indentation and line break
+
+Use 2 space indentation and prefer to aggressively break lines
+
+```scala
+def >=>[C](m2: B => Writer[C]): A => Writer[C] 
+   = { x => 
+     ...
+   }
+```
+If the signature is too long, we break it to multiple lines as well. Control each line to be within 45 characters.
 
 ## License 
 
