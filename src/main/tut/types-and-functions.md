@@ -16,7 +16,7 @@ val f: Boolean => Boolean
 f :: Bool -> Bool
 f x = undefined
 ```
-```scala
+```tut:silent
 val f: Boolean => Boolean = x => ???
 ```
 ................
@@ -24,14 +24,14 @@ val f: Boolean => Boolean = x => ???
 f :: Bool -> Bool
 f = undefined
 ```
-```scala
+```tut:silent
 def f: Boolean => Boolean = ???
 ```
 ................
 ```Haskell
 fact n = product [1..n]
 ```
-```scala
+```tut:silent
 val fact = (n: Int) => (1 to n).toList.product
 ```
 ................
@@ -46,7 +46,7 @@ def absurd[A]: Nothing => A
 f44 :: () -> Integer
 f44 () = 44
 ```
-```scala
+```tut:silent
 val f44: Unit => BigInt = _ => 44
 ```
 ................
@@ -54,7 +54,7 @@ val f44: Unit => BigInt = _ => 44
 fInt :: Integer -> ()
 fInt x = ()
 ```
-```scala
+```tut:silent
 val fInt: BigInt => Unit = x => ()
 ```
 ................
@@ -62,7 +62,7 @@ val fInt: BigInt => Unit = x => ()
 fInt :: Integer -> ()
 fInt _ = ()
 ```
-```scala
+```tut:silent
 val fInt: BigInt => Unit = _ => ()
 ```
 ................
@@ -70,14 +70,14 @@ val fInt: BigInt => Unit = _ => ()
 unit :: a -> ()
 unit _ = ()
 ```
-```scala
+```tut:silent
 def unit[A]: A => Unit = _ => ()
 ```
 ................
 ```Haskell
 data Bool = True | False
 ```
-```scala
+```tut:silent
 sealed trait Bool
 case object True extends Bool
 case object False extends Bool
