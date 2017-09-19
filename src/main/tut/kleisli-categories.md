@@ -27,7 +27,8 @@ m1 >=> m2 = \x ->
 ```
 ```tut:silent
 object kleisli {
-  implicit class Fishy[A, B](m1: A => Writer[B]) {
+  //allows us to use >=> as an infix operator
+  implicit class KleisliOps[A, B](m1: A => Writer[B]) {
    def >=>[C](m2: B => Writer[C]): A => Writer[C] =
     x => {
       val (y, s1) = m1(x)
@@ -43,7 +44,7 @@ return :: a -> Writer a
 return x = (x, "")
 ```
 ```tut:silent
-def `return`[A](x: A): Writer[A] = (x, "")
+def pure[A](x: A): Writer[A] = (x, "")
 ```
 ................
 ```Haskell
@@ -51,7 +52,8 @@ upCase :: String -> Writer String
 upCase s = (map toUpper s, "upCase ")
 ```
 ```tut:silent
-val upCase: String => Writer[String] = s => (s.toUpperCase, "upCase ")
+val upCase: String => Writer[String] =
+  s => (s.toUpperCase, "upCase ")
 ```
 ................
 ```Haskell
@@ -59,7 +61,8 @@ toWords :: String -> Writer [String]
 toWords s = (words s, "toWords ")
 ```
 ```tut:silent
-val toWords: String => Writer[List[String]] = s => (s.split(' ').toList, "toWords ")
+val toWords: String => Writer[List[String]] =
+  s => (s.split(' ').toList, "toWords ")
 ```
 ................
 ```Haskell
@@ -67,5 +70,8 @@ process :: String -> Writer [String]
 process = upCase >=> toWords
 ```
 ```tut:silent
-val process: String => Writer[List[String]] = { import kleisli._; upCase >=> toWords }
+val process: String => Writer[List[String]] = {
+  import kleisli._
+  upCase >=> toWords
+}
 ```
