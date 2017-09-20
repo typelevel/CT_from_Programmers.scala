@@ -4,6 +4,8 @@
 Any contribution (PR, review, issues) will be more than welcome!
 
 [![Build Status](https://travis-ci.org/typelevel/CT_from_Programmers.scala.svg)](https://travis-ci.org/typelevel/CT_from_Programmers.scala)
+[![Gitter](https://badges.gitter.im/typelevel/CT_from_Programmers.scala.svg)](https://gitter.im/typelevel/CT_from_Programmers.scala?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 
 To compile
 
