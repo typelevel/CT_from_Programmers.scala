@@ -8,7 +8,7 @@
 
 ## Contributing
 Any contribution (PR, review, issues) will be more than welcome!
-If you are interested, please indicate that you are working on a certain section in the respective issue ([can be found here](https://github.com/typelevel/CT_from_Programmers.scala/issues).
+If you are interested, please indicate that you are working on a certain section in the respective issue. [You can find the issues here.](https://github.com/typelevel/CT_from_Programmers.scala/issues).
 
 To compile
 
