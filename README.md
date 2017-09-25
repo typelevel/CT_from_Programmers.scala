@@ -68,6 +68,12 @@ def >=>[C](m2: B => Writer[C]): A => Writer[C]
 ```
 If the signature is too long, we break it to multiple lines as well. Control each line to be within 45 characters.
 
+### Symbol names
+
+For the prime symbole, use *U+16CC RUNIC LETTER SHORT-TWIG-SOL S* `ᛌ`, it works with scalac while the unicode prime symbole doesn't
+
+
+
 ## License 
 
 ![CC image](https://i.creativecommons.org/l/by/4.0/88x31.png)
