@@ -322,15 +322,6 @@ val prod1: (Int, Either[String, Float]) =
 ```
 ...............
 ```Haskell
-prod1 :: (Int, Either String Float)
-prod1 = (2, Left "Hi!")
-```
-```tut:silent
-val prod1: (Int, Either[String, Float]) =
-  (2, Left("Hi!"))
-```
-...............
-```Haskell
 List a = Nil | Cons a (List a)
 ```
 ```tut:silent
