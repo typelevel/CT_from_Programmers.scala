@@ -70,7 +70,7 @@ If the signature is too long, we break it to multiple lines as well. Control eac
 
 ### Symbol names
 
-For the prime symbole, use *U+16CC RUNIC LETTER SHORT-TWIG-SOL S* `ᛌ`, it works with scalac while the unicode prime symbole doesn't
+For the prime symbol, use *U+16CC RUNIC LETTER SHORT-TWIG-SOL S* `ᛌ`, it works with scalac while the unicode prime symbol doesn't
 
 
 
